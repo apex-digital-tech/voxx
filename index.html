@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 🛠️ OPTIMISÉ : Titre harmonisé avec la marque et le produit -->
+    <title>VOXX SHOP | Durags Y2K Flashy Maroc</title>
+    <!-- Liaison avec le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        🔥 <span>VOXX</span> SHOP - STREETWEAR MOROCCO 🔥
+    </header>
+
+    <div class="container">
+
+        <!-- Zone Produit & Prix -->
+        <div class="product-info">
+            <h1 class="product-title">Durag VOXX "Y2K" Edition</h1>
+            <div class="price-tag">99 DH</div>
+            <div class="cod-badges">
+                <div class="badge">🚚 Livraison (Rapide)</div>
+                <div class="badge">🇲🇦 Paiement à la Livraison (<span>COD</span>)</div>
+                <div class="badge">💯 Qualité Premium</div>
+            </div>
+        </div>
+
+        <!-- Slider Interactif -->
+        <div class="slider-container">
+            <button class="slider-btn prev" onclick="moveSlider(-1)">❮</button>
+            <button class="slider-btn next" onclick="moveSlider(1)">❯</button>
+            <div class="slides" id="slider">
+                <div class="slide" onclick="openLightbox(0)"><img src="MANIX1.png" alt="Durag 1"></div>
+                <div class="slide" onclick="openLightbox(1)"><img src="MANIX2.png" alt="Durag 2"></div>
+                <div class="slide" onclick="openLightbox(2)"><img src="MANIX3.png" alt="Durag 9"></div>
+            </div>
+        </div>
+
+        <!-- Galerie de Miniatures Interactive -->
+        <div class="gallery-thumbs">
+            <!-- 🛠️ CORRIGÉ : La première miniature correspond bien à la première slide (SAN1.png) -->
+            <div class="thumb active" onclick="jumpToSlide(0)"><img src="MANIX1.png" alt="Miniature 1"></div>
+            <div class="thumb" onclick="jumpToSlide(1)"><img src="MANIX2.png" alt="Miniature 2"></div>
+            <div class="thumb" onclick="jumpToSlide(2)"><img src="MANIX3.png" alt="Miniature 3"></div>
+        </div>
+
+        <!-- Formulaire de Commande Directe -->
+        <div class="order-section" id="commander">
+            <h2>⚡ Remplis le formulaire pour commander !</h2>
+            <form id="codForm" onsubmit="sendToWhatsApp(event)">
+                
+                <div class="form-group">
+                    <label for="name">Nom Complet (الاسم الكامل) :</label>
+                    <input type="text" id="name" required placeholder="Ex: Amine Benjelloun">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Numéro de Téléphone (رقم الهاتف) :</label>
+                    <input type="tel" id="phone" required placeholder="Ex: 0600000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Ville (المدينة) :</label>
+                    <select id="city" required>
+                        <option value="" disabled selected>Choisir ta ville</option>
+                        <option value="Casablanca">Casablanca / الدار البيضاء</option>
+                        <option value="Rabat">Rabat / الرباط</option>
+                        <option value="Marrakech">Marrakech / مراكش</option>
+                        <option value="Tanger">Tanger / طنجة</option>
+                        <option value="Fès">Fès / فاس</option>
+                        <option value="Agadir">Agadir / أكادير</option>
+                        <option value="Autre Ville">Autre ville / ville non listée</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Couleur du Durag (اللون) :</label>
+                    <select id="color" required>
+                        <option value="Noir Cyber">Noir Cyber 🖤</option>
+                        <option value="Rose Flashy">Rose Flashy 💖</option>
+                        <option value="Vert Néon">Vert Néon 💚</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    💬 Confirmer par WhatsApp
+                </button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Fenêtre Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Zoom">
+    </div>
+
+    <!-- Liaison avec le fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
