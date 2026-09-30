@@ -73,7 +73,7 @@ function sendToWhatsApp(event) {
                     `📍 *Ville :* ${city}\n` +
                     `📦 *Produit :* Durag VOXX "Y2K" Edition\n` +
                     `🎨 *Couleur :* ${color}\n` +
-                    `💰 *Prix :* 149 DH\n\n` +
+                    `💰 *Prix :* 99 DH\n\n` +
                     `🚚 _Livraison gratuite et paiement à la livraison confirmés._`;
     
     // Encodage des caractères spéciaux pour l'URL
