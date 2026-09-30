@@ -83,7 +83,7 @@ function sendToWhatsApp(event) {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     
     // Numéro au format international sans le "+" ou "00" (Exemple pour 0656041696 -> 212656041696)
-    const phoneNumber = "212656041696";
+    const phoneNumber = "212614787767";
     let whatsAppUrl = "";
 
     if (isMobile) {
